@@ -5,27 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvavryn <dvavryn@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/10 23:41:31 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/05/11 00:50:39 by dvavryn          ###   ########.fr       */
+/*   Created: 2025/05/11 01:50:25 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/05/11 02:24:08 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GNL_H
-# define GNL_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # include <unistd.h>
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 25
 # endif
 
+// main file
 char	*get_next_line(int fd);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-void	*ft_calloc(size_t nmemb, size_t size);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s);
+
+// utils file
+size_t	gnl_strlen(const char *s);
+void	*gnl_calloc(size_t nmemb, size_t size);
+char	*gnl_substr(const char *s, unsigned int start, size_t len);
+char	*gnl_strjoin(const char *s1, const char *s2);
+char	*gnl_strchr(const char *s, int c);
+char	*gnl_strdup(const char *s);
 
 #endif
